@@ -1,0 +1,13 @@
+server:
+  port: 8787
+
+security:
+  oauth2:    
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
+
+logging.level:
+  root: WARN
+  com.orangeandbronze: DEBUG
+#  org.apache.http.headers: DEBUG
+#  org.apache.http.wire: DEBUG

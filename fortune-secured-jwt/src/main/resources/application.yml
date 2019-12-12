@@ -1,0 +1,18 @@
+server:
+  port: 8787
+
+security:
+  oauth2:    
+    client:
+      clientId: acme
+      clientSecret: acmesecret
+    resource:
+#      userInfoUri: http://localhost:9999/uaa/user
+      jwt:
+        key-uri: http://localhost:9999/uaa/oauth/token_key
+
+logging.level:
+  root: WARN
+  com.orangeandbronze: DEBUG
+#  org.apache.http.headers: DEBUG
+#  org.apache.http.wire: DEBUG

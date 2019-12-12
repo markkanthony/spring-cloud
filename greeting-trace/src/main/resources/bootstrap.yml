@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: greeting-trace
+logging: # <----New sections below
+    level:
+        root: WARN
+        com:
+            orangeandbronze: DEBUG

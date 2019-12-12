@@ -1,0 +1,29 @@
+server:
+  port: 8790
+
+security:
+  oauth2:    
+    client:
+      clientId: acme
+      clientSecret: acmesecret
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
+
+zuul:
+  routes:
+    fortune:
+      serviceId: fortune-service
+
+# The default behaviour is to do a token relay
+# if there is a token available, and passthru otherwise.
+#proxy:
+#  auth:
+#    routes:
+#      fortune: oauth2
+
+logging.level:
+  root: WARN
+  com.orangeandbronze: DEBUG
+  org.apache.http.headers: DEBUG

@@ -1,0 +1,10 @@
+server:
+  port: 8787
+spring:
+  application:
+    name: fortune-service
+logging: # <----New sections below
+    level:
+        root: WARN
+        com:
+            orangeandbronze: DEBUG

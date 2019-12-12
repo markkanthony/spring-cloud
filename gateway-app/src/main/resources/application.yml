@@ -1,0 +1,4 @@
+zuul:
+    routes:
+        fortune: # <-- NAME (from request path)
+            serviceId: fortune-service
